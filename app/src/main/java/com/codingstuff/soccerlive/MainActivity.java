@@ -57,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
                         String title = jsonObject.getString("title");
                         String date = jsonObject.getString("date");
                         String thumbnail = jsonObject.getString("thumbnail");
-                        String side1= jsonObject.getString("side2");
-                        String side2= jsonObject.getString("side1");
+                        String side1= jsonObject.getString("side1");
+                        String side2= jsonObject.getString("side2");
 
 
                         Soccer soccer = new Soccer(title ,date, thumbnail,side1);

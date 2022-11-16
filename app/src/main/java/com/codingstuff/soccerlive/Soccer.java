@@ -2,26 +2,26 @@ package com.codingstuff.soccerlive;
 
 public class Soccer {
 
-    private String title , side1 , date, thumbnail;
+    private String title , date , side1, thumbnail;
 //123
-    public Soccer(String title, String side1, String date, String thumbnail ){
+    public Soccer(String title,  String date,String side1, String thumbnail ){
         this.title = title;
-        this.side1 = side1;
         this.date = date;
+        this.side1 = side1;
         this.thumbnail = thumbnail;
     }
 
     public String getTitle() {
         return title;
     }
+    public String getDate() {
+        return date;
+    }
 
     public String getSide1() {
         return side1;
     }
 
-    public String getDate() {
-        return date;
-    }
 
     public String getThumbnail( ) {return thumbnail;}
 
