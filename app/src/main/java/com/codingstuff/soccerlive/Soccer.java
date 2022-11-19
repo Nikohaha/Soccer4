@@ -11,6 +11,11 @@ public class Soccer {
         this.thumbnail = thumbnail;
     }
 
+    public Soccer(String title, String date){
+        this.title = title;
+        this.date = date;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -24,6 +29,8 @@ public class Soccer {
 
 
     public String getThumbnail( ) {return thumbnail;}
+
+
 
 
 }

@@ -17,7 +17,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -55,13 +57,14 @@ public class MainActivity extends AppCompatActivity {
                     try {
                         JSONObject jsonObject = response.getJSONObject(i);
                         String title = jsonObject.getString("title");
-                        String date = jsonObject.getString("date");
-                        String thumbnail = jsonObject.getString("thumbnail");
-                        String side1= jsonObject.getString("side1");
-                        String side2= jsonObject.getString("side2");
+                        String dateUnFormat = jsonObject.getString("date");
+                        String date = dateUnFormat.substring(0,10) + "  " +dateUnFormat.substring(12,16);
+//                        String thumbnail = jsonObject.getString("thumbnail");
+//                        String side1= jsonObject.getString("side1");
+//                        String side2= jsonObject.getString("side2");
 
 
-                        Soccer soccer = new Soccer(title ,date, thumbnail,side1);
+                        Soccer soccer = new Soccer(title,date);
                         soccerList.add(soccer);
                     } catch (JSONException e) {
                         e.printStackTrace();
