@@ -2,9 +2,13 @@ package com.codingstuff.soccerlive;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.net.Uri;
 import android.os.Bundle;
-import android.widget.ImageView;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.VideoView;
+import android.widget.MediaController;
 
 import com.bumptech.glide.Glide;
 
@@ -15,23 +19,36 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
+        String url_hl = "https://www.scorebat.com//embed//v//637a688f8c5a7//?utm_source=api&utm_medium=video&utm_campaign=dflt";
+        Uri videoURI = Uri.parse(url_hl);
 
-        ImageView imageView = findViewById(R.id.thumbnail);
-        TextView rating_tv = findViewById(R.id.mRating);
-        TextView title_tv = findViewById(R.id.mTitle);
-        TextView overview_tv = findViewById(R.id.movervie_tv);
+        TextView mDate = findViewById(R.id.mDate);
+        TextView mTitle = findViewById(R.id.mTitle);
+        VideoView mVideo = findViewById(R.id.mVideo);
+        Button mbtn = findViewById(R.id.mBtn);
+
+        MediaController mediaController = new MediaController(this);
+        mediaController.setAnchorView(mVideo);
 
         Bundle bundle = getIntent().getExtras();
 
-        String mTitle = bundle.getString("title");
-        String mthumbnail = bundle.getString("thumbnail");
-        String mOverView = bundle.getString("overview");
-       String mDate = bundle.getString("date");
+        String Title = bundle.getString("title");
+        String Date = bundle.getString("date");
 
-        Glide.with(this).load(mthumbnail).into(imageView);
-        rating_tv.setText(mDate);
-        title_tv.setText(mTitle);
-        overview_tv.setText(mOverView);
+        mDate.setText(Date);
+        mTitle.setText(Title);
+
+        mVideo.setMediaController(mediaController);
+        mVideo.setVideoURI(videoURI);
+
+        mbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mVideo.start();
+            }
+        });
+
+
 
     }
 }

@@ -7,24 +7,14 @@
     tools:context=".DetailActivity">
 
 
-    <ImageView
-        android:id="@+id/thumbnail"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
     <TextView
-        android:id="@+id/mRating"
+        android:id="@+id/mDate"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
-        android:text="rating_tv"
+        android:gravity="center"
+        android:text="date"
         android:textColor="@color/teal_700"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -35,25 +25,34 @@
 
     <TextView
         android:id="@+id/mTitle"
-        android:layout_width="350dp"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="15dp"
         android:text="Soccer Matches"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/thumbnail" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/movervie_tv"
-        android:layout_width="358dp"
+    <Button
+        android:id="@+id/mBtn"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="description"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mRating" />
+        android:text="Watch Highlights"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/mTitle"
+        app:layout_constraintTop_toBottomOf="@+id/mTitle" />
+
+    <VideoView
+        android:id="@+id/mVideo"
+        android:layout_width="349dp"
+        android:layout_height="359dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/mBtn"
+        app:layout_constraintStart_toStartOf="@+id/mDate"
+        app:layout_constraintTop_toBottomOf="@+id/mDate" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

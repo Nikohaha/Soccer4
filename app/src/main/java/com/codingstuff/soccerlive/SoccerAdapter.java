@@ -80,7 +80,6 @@ public class SoccerAdapter extends RecyclerView.Adapter<SoccerAdapter.SoccerHold
             side1 = itemView.findViewById(R.id.side1);
             title = itemView.findViewById(R.id.title_i);
             date = itemView.findViewById(R.id.date_i);
-            thumbnail = itemView.findViewById(R.id.thumbnail);
             constraintLayout = itemView.findViewById(R.id.main_layout);
         }
     }
