@@ -1,4 +1,4 @@
-package com.codingstuff.soccerlive;
+package com.codingstuff.soccerlive.Helpers;
 
 import android.content.ContentValues;
 import android.content.Context;
