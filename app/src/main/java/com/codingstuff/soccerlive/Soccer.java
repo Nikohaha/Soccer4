@@ -2,23 +2,38 @@ package com.codingstuff.soccerlive;
 
 public class Soccer {
 
-    private String title , date , side1, thumbnail;
-//123
-    public Soccer(String title,  String date,String side1, String thumbnail ){
-        this.title = title;
-        this.date = date;
-        this.side1 = side1;
-        this.thumbnail = thumbnail;
-    }
+    private String title , date , side1, key_id,favStatus;
+
 
     public Soccer(String title, String date){
         this.title = title;
         this.date = date;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public void setSide1(String side1) {
+        this.side1 = side1;
+    }
+
+    public void setKey_id(String key_id) {
+        this.key_id = key_id;
+    }
+
+    public void setFavStatus(String favStatus) {
+        this.favStatus = favStatus;
+    }
+
     public String getTitle() {
         return title;
     }
+
     public String getDate() {
         return date;
     }
@@ -27,10 +42,11 @@ public class Soccer {
         return side1;
     }
 
+    public String getKey_id() {
+        return key_id;
+    }
 
-    public String getThumbnail( ) {return thumbnail;}
-
-
-
-
+    public String getFavStatus() {
+        return favStatus;
+    }
 }

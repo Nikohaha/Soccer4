@@ -62,11 +62,11 @@
 
             <Button
                 android:id="@+id/favBtn"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:layout_marginTop="8dp"
                 android:text="Button"
-                android:background="@drawable/ic_favorite_red_24"
+                android:background="@drawable/ic_favorite_shadow_24"
                 app:layout_constraintStart_toEndOf="@+id/title_i"
                 app:layout_constraintTop_toTopOf="parent" />
 

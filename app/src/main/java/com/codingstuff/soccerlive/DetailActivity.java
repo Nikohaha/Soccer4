@@ -43,7 +43,7 @@ public class DetailActivity extends AppCompatActivity {
 
         mbtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 mVideo.start();
             }
         });

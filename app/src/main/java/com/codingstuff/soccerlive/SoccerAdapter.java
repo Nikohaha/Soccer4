@@ -52,7 +52,6 @@ public class SoccerAdapter extends RecyclerView.Adapter<SoccerAdapter.SoccerHold
                 bundle.putString("title" , soccer.getTitle());
                 bundle.putString("date" , soccer.getDate());
                 bundle.putString("side1" , soccer.getSide1());
-                bundle.putString("thumbnail" , soccer.getThumbnail());
 
 
                 intent.putExtras(bundle);
